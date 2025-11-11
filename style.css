@@ -1,0 +1,16 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+.chambers {
+  padding: 25px;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 38% 17% 22% 22%;
+  grid-template-rows: 33.5% 32% 32.5%;
+}
+
