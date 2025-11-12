@@ -94,3 +94,29 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+#employeeForm label {
+  display: block;
+  margin: 10px 0 4px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #444;
+}
+
+#employeeForm input,
+#employeeForm select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  background: #f9f9f9;
+  transition: .3s ease;
+}
+
+#employeeForm input:focus,
+#employeeForm select:focus {
+  border-color: #4a90e2;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(74,144,226,0.2);
+}
