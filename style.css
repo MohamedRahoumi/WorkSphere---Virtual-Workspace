@@ -7,6 +7,7 @@ body {
   font-family: Arial, sans-serif;
 }
 .chambers {
+  flex: 1;
   padding: 25px;
   display: grid;
   gap: 18px;
