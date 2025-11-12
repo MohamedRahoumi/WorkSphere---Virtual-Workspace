@@ -121,6 +121,16 @@ body {
   box-shadow: 0 0 0 3px rgba(74,144,226,0.2);
 }
 
+.add_btn {
+  margin-left: auto;
+  background: #287bff;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 .close_btn {
   margin-top: 15px;
   width: 100%;
@@ -141,4 +151,77 @@ body {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup_item {
+  display: flex;
+  align-items: center;
+  background: #eee;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+#experienceList div {
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.popup_content {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+
+.popup_item img {
+  width: 45px;
+  height: 45px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.remove_btn {
+  margin-left: auto;
+  padding: 5px 10px;
+  background: red;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.employee_box,
+.room_emp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.photo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.room_emp img {
+  width: 45px;
+  height: 45px;
+  border-radius: 6px;
+  object-fit: cover;
 }
