@@ -82,3 +82,15 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+#employeeForm {
+  width: 100%;
+  max-width: 450px;
+  margin: 20px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  font-family: "Poppins", sans-serif;
+}
+
