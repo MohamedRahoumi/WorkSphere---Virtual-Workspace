@@ -120,3 +120,25 @@ body {
   background: #fff;
   box-shadow: 0 0 0 3px rgba(74,144,226,0.2);
 }
+
+.close_btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit_btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: #287bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
