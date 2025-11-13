@@ -55,5 +55,16 @@ form.onsubmit = (e) => {
     room: null
   };
 
+  document.querySelectorAll("#experienceList .popup_item")
+    .forEach(ex => {
+      employee.experiences.push({
+        title: ex.querySelector(".exp_title").value,
+        start: ex.querySelector(".exp_start").value,
+        end: ex.querySelector(".exp_end").value
+      });
+    });
+
+  employees.push(employee);
+
  
 };
