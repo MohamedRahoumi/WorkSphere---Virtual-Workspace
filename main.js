@@ -42,5 +42,18 @@ document.getElementById("addExperienceBtn").onclick = () => {
 };
 
 form.onsubmit = (e) => {
+  e.preventDefault();
+
+  const employee = {
+    id: Date.now(),
+    name: document.getElementById("name").value,
+    role: document.getElementById("role").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value,
+    image: document.getElementById("photoUrl").value,
+    experiences: [],
+    room: null
+  };
+
  
 };
