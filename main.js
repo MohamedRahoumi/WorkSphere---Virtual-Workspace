@@ -19,5 +19,16 @@ document.getElementById("addExperienceBtn").onclick = () => {
   const div = document.createElement("div");
   div.className = "popup_item";
 
-  
+  div.innerHTML = `
+    <input type="text" placeholder="Titre" class="exp_title" required />
+    <input type="date" class="exp_start" required />
+    <input type="date" class="exp_end" required />
+    <button class="remove_btn removeExp">X</button>
+  `;
+
+  div.querySelector(".removeExp").onclick = () => div.remove();
+
+ 
+
+  document.getElementById("experienceList").appendChild(div);
 };
