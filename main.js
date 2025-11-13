@@ -40,3 +40,7 @@ document.getElementById("addExperienceBtn").onclick = () => {
 
   document.getElementById("experienceList").appendChild(div);
 };
+
+form.onsubmit = (e) => {
+ 
+};
