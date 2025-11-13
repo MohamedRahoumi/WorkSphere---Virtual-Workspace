@@ -28,7 +28,15 @@ document.getElementById("addExperienceBtn").onclick = () => {
 
   div.querySelector(".removeExp").onclick = () => div.remove();
 
- 
+  const start = div.querySelector(".exp_start");
+  const end = div.querySelector(".exp_end");
+
+  end.onchange = () => {
+    if (start.value && end.value && start.value > end.value) {
+      alert("La date de fin erreur");
+      end.value = "";
+    }
+  };
 
   document.getElementById("experienceList").appendChild(div);
 };
