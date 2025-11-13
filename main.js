@@ -66,5 +66,10 @@ form.onsubmit = (e) => {
 
   employees.push(employee);
 
- 
+  displayUnassigned();
+  displayRooms();
+
+  popup.classList.add("hidden");
+  form.reset();
+  document.getElementById("experienceList").innerHTML = "";
 };
