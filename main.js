@@ -211,3 +211,8 @@ function displayRooms() {
 
   updateRoomColors();
 }
+
+window.onload = () => {
+  displayRooms();
+  updateRoomColors();
+};
