@@ -139,3 +139,26 @@ function canEnterRoom(emp, room) {
 
   return false;
 }
+
+function openRoomPopup(roomName) {
+  selectedRoom = roomName;
+  popupList.innerHTML = "";
+
+  employees
+    .filter(e => e.room === null && canEnterRoom(e, roomName) && !isRoomFull(roomName))
+    .forEach(e => {
+      const div = document.createElement("div");
+      div.className = "popup_item";
+
+      div.innerHTML = `
+        <img src="${e.image}" />
+        <p>${e.name}</p>
+        <button class="add_btn">Ajouter</button>
+      `;
+
+      div.querySelector(".add_btn").onclick = () => assignToRoom(e.id);
+      popupList.appendChild(div);
+    });
+
+  document.getElementById("roomPopup").classList.remove("hidden");
+}
