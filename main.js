@@ -162,3 +162,19 @@ function openRoomPopup(roomName) {
 
   document.getElementById("roomPopup").classList.remove("hidden");
 }
+
+document.getElementById("closeRoomPopup").onclick = () =>
+  document.getElementById("roomPopup").classList.add("hidden");
+
+
+function assignToRoom(id) {
+  if (isRoomFull(selectedRoom)) return alert("Salle pleine");
+
+  const emp = employees.find(e => e.id === id);
+  emp.room = selectedRoom;
+
+  displayUnassigned();
+  displayRooms();
+  updateRoomColors();
+  document.getElementById("roomPopup").classList.add("hidden");
+}
