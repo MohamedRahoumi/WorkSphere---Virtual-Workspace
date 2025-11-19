@@ -194,7 +194,6 @@ function displayRooms() {
         el.innerHTML = `
           <img src="${e.image}" />
           <p>${e.name}</p>
-          <span>${e.role}</span>
           <button class="remove_btn">Remove</button>
         `;
 
