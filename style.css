@@ -249,3 +249,13 @@ body {
     height: auto;
   }
 }
+
+@media (max-width: 600px) {
+  .chambers {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .popup_content { width: 90%; }
+}
