@@ -126,3 +126,16 @@ function displayUnassigned() {
     unassignedList.appendChild(div);
   });
 }
+
+function canEnterRoom(emp, room) {
+  const r = emp.role;
+
+  if (r === "Manager") return true;
+  if (r === "Nettoyage") return room !== "archives";
+  if (r === "Autre") return room === "reception" || room === "personnel";
+  if (r === "Agent de securite") return room === "securite";
+  if (r === "Receptionniste") return room === "reception";
+  if (r === "Technicien IT") return room === "serveurs";
+
+  return false;
+}
