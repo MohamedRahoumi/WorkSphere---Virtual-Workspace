@@ -178,3 +178,36 @@ function assignToRoom(id) {
   updateRoomColors();
   document.getElementById("roomPopup").classList.add("hidden");
 }
+
+function displayRooms() {
+  document.querySelectorAll(".room").forEach(div => {
+    const roomName = div.dataset.room;
+    const list = div.querySelector(".room_list");
+    list.innerHTML = "";
+
+    employees
+      .filter(e => e.room === roomName)
+      .forEach(e => {
+        const el = document.createElement("div");
+        el.className = "room_emp";
+
+        el.innerHTML = `
+          <img src="${e.image}" />
+          <p>${e.name}</p>
+          <span>${e.role}</span>
+          <button class="remove_btn">Remove</button>
+        `;
+
+        el.querySelector(".remove_btn").onclick = () => {
+          e.room = null;
+          displayRooms();
+          displayUnassigned();
+          updateRoomColors();
+        };
+
+        list.appendChild(el);
+      });
+  });
+
+  updateRoomColors();
+}
