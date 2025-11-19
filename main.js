@@ -110,3 +110,19 @@ function updateRoomColors() {
     }
   });
 }
+
+function displayUnassigned() {
+  unassignedList.innerHTML = "";
+
+  employees.filter(e => e.room === null).forEach(e => {
+    const div = document.createElement("div");
+    div.className = "employee_box";
+
+    div.innerHTML = `
+      <img src="${e.image}" class="photo"/>
+      <span>${e.role}</span>
+    `;
+
+    unassignedList.appendChild(div);
+  });
+}
