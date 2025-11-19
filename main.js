@@ -86,3 +86,27 @@ form.onsubmit = (e) => {
 function isRoomFull(room) {
   return employees.filter(e => e.room === room).length >= roomLimits[room];
 }
+
+function updateRoomColors() {
+  document.querySelectorAll(".room").forEach(room => {
+    const roomName = room.dataset.room;
+    const isEmpty = room.querySelector(".room_list").children.length === 0;
+
+    if (isRoomFull(roomName)) {
+      room.style.background = "#ffe066";
+      room.style.border = "2px solid #000";
+      return;
+    }
+
+    if ((roomName === "conference" || roomName === "personnel") && isEmpty) {
+      room.style.background = "#d4f8d4";
+      room.style.border = "2px solid #28a745";
+    } else if (isEmpty) {
+      room.style.background = "#ffd6d6";
+      room.style.border = "2px solid #ff4d4d";
+    } else {
+      room.style.background = "#d4f8d4";
+      room.style.border = "1px solid #ccc";
+    }
+  });
+}
