@@ -1,6 +1,15 @@
 const employees = [];
 let selectedRoom = null;
 
+const roomLimits = {
+  reception: 4,
+  securite: 2,
+  serveurs: 2,
+  conference: 6,
+  archives: 2,
+  personnel: 2
+};
+
 const openForm = document.getElementById("openForm");
 const closeForm = document.getElementById("closeForm");
 const popup = document.getElementById("popup");
@@ -73,3 +82,7 @@ form.onsubmit = (e) => {
   form.reset();
   document.getElementById("experienceList").innerHTML = "";
 };
+
+function isRoomFull(room) {
+  return employees.filter(e => e.room === room).length >= roomLimits[room];
+}
