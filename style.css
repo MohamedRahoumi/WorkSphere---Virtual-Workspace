@@ -9,4 +9,10 @@
     .serveurs {
       grid-area: 1 / 3 / 2 / 4;
     }
+    .security {
+      grid-area: 1 / 4 / 2 / 5;
+    }
+    .reception {
+      grid-area: 2 / 1 / 4 / 2;
+    }
     
