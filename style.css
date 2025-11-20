@@ -1,0 +1,5 @@
+.chambers {
+      display: grid;
+      grid-template-columns: 38% 17% 22% 22%;
+      grid-template-rows: 33.5% 32% 32.5%;
+    }
