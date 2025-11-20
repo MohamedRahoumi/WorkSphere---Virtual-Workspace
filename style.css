@@ -15,4 +15,9 @@
     .reception {
       grid-area: 2 / 1 / 4 / 2;
     }
-    
+    .personel {
+      grid-area: 3 / 3 / 4 / 4;
+    }
+    .archive {
+      grid-area: 3 / 4 / 4 / 5;
+    }
