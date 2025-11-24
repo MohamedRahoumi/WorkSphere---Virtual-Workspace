@@ -61,6 +61,53 @@
           <div class="room_list"></div>
         </div>
     </section>
+    <div id="popup" class="popup hidden">
+    <div class="popup_content">
+      <h2>Ajouter un employe</h2>
+
+      <form id="employeeForm">
+        <label>Nom :</label>
+        <input type="text" id="name" pattern="^[A-Za-zÀ-ÿ\s]{2,40}$" required />
+
+        <label>Role :</label>
+        <select id="role">
+          <option>Manager</option>
+          <option>Receptionniste</option>
+          <option>Technicien IT</option>
+          <option>Agent de securite</option>
+          <option>Nettoyage</option>
+          <option>Autre</option>
+        </select>
+
+        <label>Email :</label>
+        <input type="email" id="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required />
+
+        <label>Telephone :</label>
+        <input type="text" id="phone" pattern="^(\+?\d{1,3})?[ ]?\d{9,10}$" required />
+
+        <label>Photo (URL) :</label>
+        <input type="text" id="photoUrl" required />
+
+        <h3 style="margin-top:10px;">Expériences :</h3>
+        <div id="experienceList"></div>
+
+        <button type="button" id="addExperienceBtn" class="submit_btn" style="background:#444;">
+          Ajouter une experience
+        </button>
+
+        <button type="submit" class="submit_btn">Ajouter</button>
+      </form>
+
+      <button id="closeForm" class="close_btn">Fermer</button>
+    </div>
+  </div>
+  <div id="roomPopup" class="popup hidden">
+    <div class="popup_content">
+      <h2>Employes autorises</h2>
+      <div id="popup_employees" class="list"></div>
+      <button id="closeRoomPopup" class="close_btn">Fermer</button>
+    </div>
+  </div>
     <script src="main.js"></script>
 </body>
 </html>

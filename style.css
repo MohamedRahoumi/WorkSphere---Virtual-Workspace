@@ -70,3 +70,158 @@ body {
   border-radius: 6px;
   cursor: pointer;
 }
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#employeeForm {
+  width: 100%;
+  max-width: 450px;
+  margin: 20px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  font-family: "Poppins", sans-serif;
+}
+
+#employeeForm label {
+  display: block;
+  margin: 10px 0 4px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #444;
+}
+
+#employeeForm input,
+#employeeForm select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  background: #f9f9f9;
+  transition: .3s ease;
+}
+
+#employeeForm input:focus,
+#employeeForm select:focus {
+  border-color: #4a90e2;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(74,144,226,0.2);
+}
+
+.add_btn {
+  margin-left: auto;
+  background: #287bff;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.close_btn {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background: red;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit_btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: #287bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup_item {
+  display: flex;
+  align-items: center;
+  background: #eee;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+#experienceList div {
+  background: #f0f0f0;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.popup_content {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+
+.popup_item img {
+  width: 45px;
+  height: 45px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.remove_btn {
+  margin-left: auto;
+  padding: 5px 10px;
+  background: red;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.employee_box,
+.room_emp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.photo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.room_emp img {
+  width: 45px;
+  height: 45px;
+  border-radius: 6px;
+  object-fit: cover;
+}
