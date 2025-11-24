@@ -7,8 +7,14 @@
   <title>Worksphere</title>
 </head>
 <body>
+    <section class="left_panel">
+      <button id="openForm" class="btn_add">Ajouter un employe</button>
+      <h3>Employes non affectes :</h3>
+      <div id="unassigned_list" class="list"></div>
+    </section>
     <section class="chambers">
         <div class="room conference" data-room="conference">
+            <button onclick="openRoomPopup('conference')" class="plus_btn">+</button>
           <div class="room_header">
             <h2>Salle de conference</h2>
           </div>
@@ -18,6 +24,7 @@
         <div class="room serveurs" data-room="serveurs">
           <div class="room_header">
             <h2>Salle des serveurs</h2>
+            <button onclick="openRoomPopup('serveurs')" class="plus_btn">+</button>
           </div>
           <div class="room_list"></div>
         </div>
@@ -25,6 +32,7 @@
         <div class="room security" data-room="securite">
           <div class="room_header">
             <h2>Salle de securite</h2>
+            <button onclick="openRoomPopup('securite')" class="plus_btn">+</button>
           </div>
           <div class="room_list"></div>
         </div>
@@ -32,6 +40,7 @@
         <div class="room reception" data-room="reception">
           <div class="room_header">
             <h2>Reception</h2>
+            <button onclick="openRoomPopup('reception')" class="plus_btn">+</button>
           </div>
           <div class="room_list"></div>
         </div>
@@ -39,6 +48,7 @@
 
         <div class="room_header">
             <h2>Salle du personnel</h2>
+            <button onclick="openRoomPopup('personnel')" class="plus_btn">+</button>
           </div>
           <div class="room_list"></div>
         </div>
@@ -46,6 +56,7 @@
         <div class="room archive" data-room="archives">
           <div class="room_header">
             <h2>Salle d'archives</h2>
+            <button onclick="openRoomPopup('archives')" class="plus_btn">+</button>
           </div>
           <div class="room_list"></div>
         </div>

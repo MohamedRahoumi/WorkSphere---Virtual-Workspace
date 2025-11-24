@@ -7,6 +7,7 @@ body {
   font-family: Arial, sans-serif;
 }
 .chambers {
+  flex: 1;
   padding: 25px;
   display: grid;
   gap: 18px;
@@ -32,4 +33,40 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.left_panel {
+  width: 280px;
+  background: #ffffff;
+  padding: 20px;
+  border-right: 2px solid #ddd;
+  height: 100vh;
+}
+
+.btn_add {
+  width: 100%;
+  padding: 10px;
+  background: #287bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.plus_btn {
+  background: #28a745;
+  border: none;
+  color: white;
+  padding: 5px 12px;
+  font-size: 20px;
+  border-radius: 6px;
+  cursor: pointer;
 }
