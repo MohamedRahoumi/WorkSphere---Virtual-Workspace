@@ -14,9 +14,9 @@
     </section>
     <section class="chambers">
         <div class="room conference" data-room="conference">
-            <button onclick="openRoomPopup('conference')" class="plus_btn">+</button>
           <div class="room_header">
             <h2>Salle de conference</h2>
+            <button onclick="openRoomPopup('conference')" class="plus_btn">+</button>
           </div>
           <div class="room_list"></div>
         </div>
@@ -67,7 +67,7 @@
 
       <form id="employeeForm">
         <label>Nom :</label>
-        <input type="text" id="name" pattern="^[A-Za-zÀ-ÿ\s]{2,40}$" required />
+        <input type="text" id="name" pattern="^[A-Za-z\s]{2,40}$" required />
 
         <label>Role :</label>
         <select id="role">
