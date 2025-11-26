@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Worksphere</title>
+</head>
+<body>
+    <section class="left_panel">
+      <button id="openForm" class="btn_add">Ajouter un employe</button>
+      <h3>Employes non affectes :</h3>
+      <div id="unassigned_list" class="list"></div>
+    </section>
+    <section class="chambers">
+        <div class="room conference" data-room="conference">
+          <div class="room_header">
+            <h2>Salle de conference</h2>
+            <button onclick="openRoomPopup('conference')" class="plus_btn">+</button>
+          </div>
+          <div class="room_list"></div>
+        </div>
+    
+        <div class="room serveurs" data-room="serveurs">
+          <div class="room_header">
+            <h2>Salle des serveurs</h2>
+            <button onclick="openRoomPopup('serveurs')" class="plus_btn">+</button>
+          </div>
+          <div class="room_list"></div>
+        </div>
+
+        <div class="room security" data-room="securite">
+          <div class="room_header">
+            <h2>Salle de securite</h2>
+            <button onclick="openRoomPopup('securite')" class="plus_btn">+</button>
+          </div>
+          <div class="room_list"></div>
+        </div>
+
+        <div class="room reception" data-room="reception">
+          <div class="room_header">
+            <h2>Reception</h2>
+            <button onclick="openRoomPopup('reception')" class="plus_btn">+</button>
+          </div>
+          <div class="room_list"></div>
+        </div>
+        <div class="room personnel" data-room="personnel">
+
+        <div class="room_header">
+            <h2>Salle du personnel</h2>
+            <button onclick="openRoomPopup('personnel')" class="plus_btn">+</button>
+          </div>
+          <div class="room_list"></div>
+        </div>
+    
+        <div class="room archive" data-room="archives">
+          <div class="room_header">
+            <h2>Salle d'archives</h2>
+            <button onclick="openRoomPopup('archives')" class="plus_btn">+</button>
+          </div>
+          <div class="room_list"></div>
+        </div>
+    </section>
+    <div id="popup" class="popup hidden">
+    <div class="popup_content">
+      <h2>Ajouter un employe</h2>
+
+      <form id="employeeForm">
+        <label>Nom :</label>
+        <input type="text" id="name" pattern="^[A-Za-z\s]{2,40}$" required />
+
+        <label>Role :</label>
+        <select id="role">
+          <option>Manager</option>
+          <option>Receptionniste</option>
+          <option>Technicien IT</option>
+          <option>Agent de securite</option>
+          <option>Nettoyage</option>
+          <option>Autre</option>
+        </select>
+
+        <label>Email :</label>
+        <input type="email" id="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required />
+
+        <label>Telephone :</label>
+        <input type="text" id="phone" pattern="^(\+?\d{1,3})?[ ]?\d{9,10}$" required />
+
+        <label>Photo (URL) :</label>
+        <input type="text" id="photoUrl" required />
+
+        <h3 style="margin-top:10px;">Expériences :</h3>
+        <div id="experienceList"></div>
+
+        <button type="button" id="addExperienceBtn" class="submit_btn" style="background:#444;">
+          Ajouter une experience
+        </button>
+
+        <button type="submit" class="submit_btn">Ajouter</button>
+      </form>
+
+      <button id="closeForm" class="close_btn">Fermer</button>
+    </div>
+  </div>
+  <div id="roomPopup" class="popup hidden">
+    <div class="popup_content">
+      <h2>Employes autorises</h2>
+      <div id="popup_employees" class="list"></div>
+      <button id="closeRoomPopup" class="close_btn">Fermer</button>
+    </div>
+  </div>
+    <script src="main.js"></script>
+</body>
+</html>
